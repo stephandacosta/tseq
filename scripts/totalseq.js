@@ -74,8 +74,12 @@ $(function(){
 
         if (picturesObj[pic].charAt(picturesObj[pic].length-6)==='b') {
           $pictureDiv.addClass('bad');
+          $pictureDiv.append('<i class="fa fa-warning fa-3x emoticon" ></i>');
+          // $pictureDiv.append($('<i class="fa-frown-o" ></i>'));
         } else {
           $pictureDiv.addClass('good');
+          $pictureDiv.append('<i class="fa fa-check-square fa-3x emoticon"></i>');
+          // $pictureDiv.append($('<i class="fa-smile-o"></i>'));
         }
         $mainDiv.append($pictureDiv);
       }
