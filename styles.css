@@ -54,6 +54,18 @@
         text-align: center;
         padding-top: 0.5em;
         color:black;
+        position:relative;
+        background-position:center;
+        background-size:cover;
+        background-repeat:no-repeat;
+      }
+
+      .menuItem span {
+        position:absolute;
+        display:block;
+        right:5%;
+        bottom:0;
+        background:lightgrey;
       }
 
       .imgControl { 

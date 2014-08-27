@@ -16,25 +16,17 @@ $(function(){
 
     var createMenuItem = function($container, ref, color, title, backgroundImg){
       var $menuItem = $('<a href="#' + ref + '"></a>');
-      var $menuDiv = $('<div class="menuItem"></div>');
-      $menuDiv.css("position", "relative" );
-      $menuDiv.css("background", color );
+
+      var $menuDiv = $('<div>');
+      $menuDiv.addClass('menuItem');
       $menuDiv.css("background-image", "url('" + backgroundImg + "')");
-      $menuDiv.css("background-position", "center");
-      $menuDiv.css("background-size", "cover");
-      $menuDiv.css("background-repeat", "no-repeat");
-      $menuItem.append($menuDiv);
 
-      var $menuTitle = $('<span>' + title + '</span>');
-      $menuTitle.css("position","absolute");
-      $menuTitle.css("display","block");
-      $menuTitle.css("right","5%");
-      $menuTitle.css("bottom","0");
-      $menuTitle.css("background","lightgrey");
+      var $menuTitle = $('<span>');
+      $menuTitle.text(title);
       $menuTitle.fitText(1, { minFontSize: '15px', maxFontSize: '40px' });
+
       $menuDiv.append($menuTitle);
-
-
+      $menuItem.append($menuDiv);
       $container.append($menuItem);
     };
     
@@ -80,10 +72,10 @@ $(function(){
         var $pictureDiv = $('<div id="' + pic + '" class="imgControl good"></div>');
         $pictureDiv.append($('<img src="' + picturesObj[pic] + '" width="100%">'));
 
-        if (picturesObj[pic].charAt(picturesObj[pic].length-5)==='b') {
-          $pictureDiv.css('border-color','red');
+        if (picturesObj[pic].charAt(picturesObj[pic].length-6)==='b') {
+          $pictureDiv.addClass('bad');
         } else {
-          $pictureDiv.css('border-color','green');
+          $pictureDiv.addClass('good');
         }
         $mainDiv.append($pictureDiv);
       }
