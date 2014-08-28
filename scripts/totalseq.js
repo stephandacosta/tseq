@@ -56,7 +56,7 @@ $(function(){
       $mainDiv.append($area);
     }
 
-    $('#content').append($mainDiv);
+    $('#content').prepend($mainDiv);
   };
 
   for (var control in refMatrix){
@@ -84,7 +84,7 @@ $(function(){
         $mainDiv.append($pictureDiv);
       }
 
-      $('#content').append($mainDiv);
+      $('#content').prepend($mainDiv);
 
     };
 
