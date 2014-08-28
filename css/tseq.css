@@ -10,6 +10,16 @@
   display:block;
 }
 
+#check {
+  display:block;
+}
+
+.container:target ~ #check {
+  display:none;
+}
+
+
+
 /* menu buttons */
 .navigation li {
   -moz-box-shadow:inset 0px 0px 0px 0px #bbdaf7;
